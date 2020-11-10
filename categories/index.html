@@ -321,7 +321,7 @@
                 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                 <script>
                     var typed = new Typed("#subtitle", {
-                        strings: ['没有未来，那就创造未来。前有阻碍，那就粉碎阻碍。','there is no future,to creat it .'],
+                        strings: ['没有未来，那就创造未来。前有阻碍，那就粉碎阻碍。','there is no future,to creat it  ok.'],
                         startDelay: 300,
                         typeSpeed: 100,
                         loop: true,
@@ -369,6 +369,8 @@
     
 
 </main>
+
+    
 
 
     <footer class="page-footer bg-color">
@@ -518,6 +520,14 @@ $(function () {
 </div>
 
 
+
+    <script type="text/javascript">
+        //只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        if (windowWidth > 768) {
+            document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+        }
+        </script>
     <script src="/libs/materialize/materialize.min.js"></script>
     <script src="/libs/masonry/masonry.pkgd.min.js"></script>
     <script src="/libs/aos/aos.js"></script>
@@ -557,7 +567,13 @@ $(function () {
     
 
     
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
 
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     
