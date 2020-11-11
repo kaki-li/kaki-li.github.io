@@ -610,9 +610,9 @@ header .go-back i {
 
 .bg-cover .description {
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 1.4em;
-    color: rgb(216, 185, 11);
+    color: #fff;
 }
 
 .bg-cover .post-title {
@@ -849,6 +849,7 @@ header .go-back i {
     margin-top: 10px;
     margin-bottom: 5px;
 }
+
 
 .recommend .post-card .post-description {
     margin: 20px auto;
