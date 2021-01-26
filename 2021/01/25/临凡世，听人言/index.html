@@ -311,7 +311,7 @@
         let pwd = '5736e8a80da41b3370cfa967c9994be3c79a59bfe60687f408b7589541efd42f';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
-                alert('密码错误，将返回主页！');
+                alert('小可爱密码错了呢，我告诉你用sha256反向破解吧！');
                 location.href = '/';
             }
         }
