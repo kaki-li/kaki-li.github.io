@@ -305,6 +305,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '5736e8a80da41b3370cfa967c9994be3c79a59bfe60687f408b7589541efd42f';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -462,7 +475,10 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="君只见水声潺潺-但未闻吾心事涓涓。"><a href="#君只见水声潺潺-但未闻吾心事涓涓。" class="headerlink" title="君只见水声潺潺 但未闻吾心事涓涓。"></a><span style="display:block;text-align:center;">君只见水声潺潺 但未闻吾心事涓涓。</span></h1><p><strong><span style=" text-align:center;display:block;">吾友啊请听我娓娓道来.</span></strong></p>
+                <h1 id="君只见水声潺潺-但未闻吾心事涓涓。"><a href="#君只见水声潺潺-但未闻吾心事涓涓。" class="headerlink" title="君只见水声潺潺 但未闻吾心事涓涓。"></a><span style="display:block;text-align:center;">君只见水声潺潺 但未闻吾心事涓涓。</span></h1><p><strong><span style=" text-align:center;display:block;">吾友啊且请听我娓娓道来.</span></strong></p>
+<h2 id="2021-1-26-阴"><a href="#2021-1-26-阴" class="headerlink" title="2021-1-26                          阴"></a>2021-1-26                          阴</h2><p><text>  不知从何时起，回家变成了一件奢侈的事。我渐渐忘记了自己的归处，与其说忘记，更不如说是迷失了。这里到底是承载着什么还是我记忆深处就在这里扎根呢？</text></p>
+<blockquote>
+<h3 id="坦诚有时候很难。接受自的那份悲伤感情"><a href="#坦诚有时候很难。接受自的那份悲伤感情" class="headerlink" title="坦诚有时候很难。接受自的那份悲伤感情"></a>坦诚有时候很难。接受自的那份悲伤感情</h3></blockquote>
 
             </div>
             <hr/>
@@ -712,8 +728,8 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            君只见水声潺潺 但未闻吾心事涓涓。吾友啊请听我娓娓道来.
-
+                            君只见水声潺潺 但未闻吾心事涓涓。吾友啊且请听我娓娓道来.
+2021-1-26                          阴  不知从何时起，回家变成了一件奢侈的事。我渐渐忘记了自己的归处，与其说忘记，更不如说是迷失了。这里到底是承
                         
                     </div>
                     <div class="publish-info">
@@ -759,9 +775,9 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这里所有的都是技术栈，我希望你好好听
-我也希望你有所改变
-你听我慢慢跟你说好吧
+                            简单记录一下技术解决1.hexo metary 主题下文章密码的设定第一步设置_config.yml的verifuPassword12verifyPassword:enable :true
+
+第二步 用sha256算法加密 处理因为我学的前
                         
                     </div>
                     <div class="publish-info">
