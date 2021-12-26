@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="contact, kaki&#39;s blog">
+    <meta name="keywords" content="vue@next学习笔记, kaki&#39;s blog">
     <meta name="description" content="来一场前端的风暴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>contact | kaki&#39;s blog</title>
+    <title>vue@next学习笔记 | kaki&#39;s blog</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -321,12 +321,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/vue3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">contact</h1>
+                    <h1 class="description center-align post-title">vue@next学习笔记</h1>
                 </div>
             </div>
         </div>
@@ -441,9 +441,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/vue-next/">
+                                <span class="chip bg-color">vue@next</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -455,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-09
+                    2021-08-08
                 </div>
                 
 
@@ -471,7 +475,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="Vue3学习笔记"><a href="#Vue3学习笔记" class="headerlink" title="Vue3学习笔记"></a>Vue3学习笔记</h1><h2 id="Vue3的新变化-源码层面"><a href="#Vue3的新变化-源码层面" class="headerlink" title="Vue3的新变化-源码层面"></a>Vue3的新变化-源码层面</h2><ul>
+<li> 源码通过单个monoRepo管理代码</li>
+<li> 使用TyprScript来重构代码</li>
+</ul>
+<h2 id="vue3-源码学习"><a href="#vue3-源码学习" class="headerlink" title="vue3 源码学习"></a>vue3 源码学习</h2><h3 id="虚拟Dom渲染过程"><a href="#虚拟Dom渲染过程" class="headerlink" title="虚拟Dom渲染过程"></a>虚拟Dom渲染过程</h3><blockquote>
+<p> template(模板) =&gt; render function（渲染函数） =&gt; vNode =&gt; 真实元素Dom</p>
+</blockquote>
+<ul>
+<li></li>
+</ul>
+<h2 id="Vue实现机制-source-core"><a href="#Vue实现机制-source-core" class="headerlink" title="Vue实现机制-source-core"></a>Vue实现机制-source-core</h2><h3 id="虚拟Dom-的优势"><a href="#虚拟Dom-的优势" class="headerlink" title="虚拟Dom 的优势"></a>虚拟Dom 的优势</h3><ul>
+<li><p>本身是一个JS对象，便于使用很多逻辑操作，如Dom操作，不会引起css回流。</p>
+</li>
+<li><p>方便实现跨平台。将VNode渲染成任意节点。容许开发属于自己的渲染器。</p>
+</li>
+</ul>
+<h3 id="Vue三大核心"><a href="#Vue三大核心" class="headerlink" title="Vue三大核心"></a>Vue三大核心</h3><ul>
+<li>compiler</li>
+<li>Runtime:Render模块，也是渲染模块</li>
+<li>Reactivity:响应式模块</li>
+</ul>
+
             </div>
             <hr/>
 
@@ -496,7 +521,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kaki-li.github.io/contact/index.html">https://kaki-li.github.io/contact/index.html</a>
+                    <a href="https://kaki-li.github.io/2021/08/08/vue-next%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">https://kaki-li.github.io/2021/08/08/vue-next%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -533,7 +558,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/vue-next/">
+                                    <span class="chip bg-color">vue@next</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -699,30 +728,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2021/08/09/Node.js/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="前端面试题">
                         
-                        <span class="card-title">contact</span>
+                        <span class="card-title">前端面试题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            实习面试题
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-09
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-09
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -731,7 +759,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -739,27 +766,27 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/contact/index.html">
+                <a href="/2021/02/17/git%E7%9A%84%E4%BD%BF%E7%94%A8/">
                     <div class="card-image">
                         
+                        <img src="https://i.loli.net/2021/02/22/J1coTdCqLjzm6Ny.jpg" class="responsive-img" alt="git的使用">
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="contact">
-                        
-                        <span class="card-title">contact</span>
+                        <span class="card-title">git的使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            git 使用 方法一、指令列表   （面向复制粘贴编程 直接照搬）  ok this is link or chained of that kowledge
+
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
                             </span>
                         <span class="publish-author">
                             
@@ -769,7 +796,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo%E6%8A%80%E6%9C%AF-git%E6%8A%80%E6%9C%AF/">
+                        <span class="chip bg-color">-hexo技术 -git技术</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
