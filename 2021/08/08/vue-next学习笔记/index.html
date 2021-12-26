@@ -496,7 +496,14 @@
 <li>Runtime:Render模块，也是渲染模块</li>
 <li>Reactivity:响应式模块</li>
 </ul>
-
+<h2 id="关于自动引入element-plus-css的问题"><a href="#关于自动引入element-plus-css的问题" class="headerlink" title="关于自动引入element -plus css的问题"></a>关于自动引入element -plus css的问题</h2><p>插件引入局部css有问题暂时不能使用</p>
+<h2 id="限制输入框的内容为数字"><a href="#限制输入框的内容为数字" class="headerlink" title="限制输入框的内容为数字"></a>限制输入框的内容为数字</h2><p> <code>value.value = value.value.replace(/[^\d.]/g, &#39;&#39;).replace(&#39;.&#39;, &#39;&#39;)</code></p>
+<h2 id="app-use-方法"><a href="#app-use-方法" class="headerlink" title="app.use()方法"></a>app.use()方法</h2><ul>
+<li>app.use(function(app)) 会默认传入一个app对象给函数</li>
+<li>app.use(obj)自动执行对象的obj.install方法</li>
+</ul>
+<h2 id="坑点记录"><a href="#坑点记录" class="headerlink" title="坑点记录"></a>坑点记录</h2><h3 id="1、路由懒加载-格式不能错"><a href="#1、路由懒加载-格式不能错" class="headerlink" title="1、路由懒加载 格式不能错"></a>1、路由懒加载 格式不能错</h3><pre><code>  component: () =&gt; import(&#39;../components/home.vue&#39;)</code></pre>
+<h2 id="Axiso封装"><a href="#Axiso封装" class="headerlink" title="Axiso封装"></a>Axiso封装</h2>
             </div>
             <hr/>
 
@@ -732,19 +739,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/08/09/Node.js/">
+                <a href="/2021/08/09/React/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="前端面试题">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="React 学习笔记">
                         
-                        <span class="card-title">前端面试题</span>
+                        <span class="card-title">React 学习笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            实习面试题
+                            React 学习笔记
                         
                     </div>
                     <div class="publish-info">
@@ -753,11 +760,23 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            kaki-li
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/React-%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    React 学习
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/react/">
+                        <span class="chip bg-color">react</span>
+                    </a>
+                    
                 </div>
                 
             </div>

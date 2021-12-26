@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="前端面试题, kaki&#39;s blog">
+    <meta name="keywords" content="React 学习笔记, kaki&#39;s blog">
     <meta name="description" content="来一场前端的风暴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>前端面试题 | kaki&#39;s blog</title>
+    <title>React 学习笔记 | kaki&#39;s blog</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -321,12 +321,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">前端面试题</h1>
+                    <h1 class="description center-align post-title">React 学习笔记</h1>
                 </div>
             </div>
         </div>
@@ -443,14 +443,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                                <span class="chip bg-color">实习面试题</span>
+                            <a href="/tags/react/">
+                                <span class="chip bg-color">react</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/React-%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                React 学习
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -475,42 +484,106 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="面试题（实习阶段）"><a href="#面试题（实习阶段）" class="headerlink" title="面试题（实习阶段）"></a>面试题（实习阶段）</h1><h2 id="一、什么是原型和原型链？"><a href="#一、什么是原型和原型链？" class="headerlink" title="一、什么是原型和原型链？"></a>一、什么是原型和原型链？</h2><h2 id="二、vue2以及vue3响应式原理"><a href="#二、vue2以及vue3响应式原理" class="headerlink" title="二、vue2以及vue3响应式原理"></a>二、vue2以及vue3响应式原理</h2><p>vue 2 响应式原理就是 Object.defindProperty(obj,key,{get和set设置函数读取和设置})</p>
-<pre><code>  Object.keys(obj).forEach((key) =&gt; &#123;
-  let value = obj[key];
-  Object.defineProperty(obj, key, &#123;
-    get: function () &#123;
-      console.log(`get$&#123;key&#125;`);
-
-      return value;
-    &#125;,
-    set: function (newValue) &#123;
-      console.log(`SETing $&#123;key&#125;`);
-      value = newValue;       
-    &#125;,
-  &#125;);
-&#125;);</code></pre>
-<blockquote>
-<p> 对函数的使用及其捕获器 apply  constract</p>
-</blockquote>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> fooProxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>foo<span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  apply<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>target<span class="token punctuation">,</span> thisArg<span class="token punctuation">,</span> argArray<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"对foo函数进行调用apply"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">return</span> target<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>thisArg<span class="token punctuation">,</span> argArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-  construct<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>target<span class="token punctuation">,</span> argArray<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"构造函数调用"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">return</span> snew <span class="token function">target</span><span class="token punctuation">(</span><span class="token operator">...</span>argArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h2 id="什么是响应式？"><a href="#什么是响应式？" class="headerlink" title="什么是响应式？"></a>什么是响应式？</h2><ul>
-<li><p> 当数据发生变化的时候，代码自动收集依赖。</p>
+                <h1 id="React-来吧-大厂必备"><a href="#React-来吧-大厂必备" class="headerlink" title="React 来吧 大厂必备"></a>React 来吧 大厂必备</h1><h2 id="知识点补充-Event-Bus"><a href="#知识点补充-Event-Bus" class="headerlink" title="知识点补充(Event Bus)"></a>知识点补充(Event Bus)</h2><ol>
+<li><p>setState数据不可变的力量–：不要直接改变this.state中的数据，才可以进行scu优化（shouldcopmonentUpdata） </p>
 </li>
-<li></li>
+<li><h3 id="全局事件传递-：Event-Bus全局事件总线-events-依赖"><a href="#全局事件传递-：Event-Bus全局事件总线-events-依赖" class="headerlink" title="全局事件传递 ：Event Bus全局事件总线   events-依赖"></a>全局事件传递 ：Event Bus全局事件总线   events-依赖</h3><p><code>import &#123;eventEmitter&#125; from &#39;events&#39;    const eventBus = neweventEmitter </code>  </p>
+<p><code>发送事件：eventBus.emit(name,...args)</code></p>
+<p><code>接受事件：eventBus.addListener(name,(...args)=&gt;void)</code></p>
+</li>
+</ol>
+<h2 id="Ref-进行原生Dom操作"><a href="#Ref-进行原生Dom操作" class="headerlink" title="Ref -进行原生Dom操作"></a>Ref -进行原生Dom操作</h2><ol>
+<li><p>在ComponentDidMount(){}中进行操作Docment</p>
+</li>
+<li><p>reference   Ref=’title’       this.refs.title  这里ref有三种写法推荐的是</p>
+</li>
+</ol>
+<pre><code>   import React, &#123; PureComponent, createRef &#125; from &quot;react&quot;;
+   &lt;h2 ref=&#123;this.titleRef&#125;&gt; chinese brush painting&lt;/h2&gt;
+       console.log(this.titleEl);
+       this.titleRef.current.innerHTML =
+       &quot;The Four great inventments of acient china&quot;;</code></pre>
+<h2 id="受控组件和非受控组件"><a href="#受控组件和非受控组件" class="headerlink" title="受控组件和非受控组件"></a>受控组件和非受控组件</h2><p>受控组件就是并非Dom管理自己的状态 而是通过this.state 也就是React管理状态。非受控组件就是反之。</p>
+<blockquote>
+<p> 比如表单的数据储存 一般是Dom自己保存，但是在React中不推荐</p>
+</blockquote>
+<h2 id="React-中的Css"><a href="#React-中的Css" class="headerlink" title="React 中的Css"></a>React 中的Css</h2><blockquote>
+<p> 在Vue中 css 编写十分优秀 <style scoped lang="less"></p>
+</blockquote>
+<h3 id="内联样式"><a href="#内联样式" class="headerlink" title="内联样式"></a>内联样式</h3><ul>
+<li>不会发生冲突样式之间</li>
+<li>需要驼峰表示 内聚性差‘</li>
+<li>某些样式无法编写 </li>
 </ul>
+<h3 id="css-in-js-（推荐）"><a href="#css-in-js-（推荐）" class="headerlink" title="css in js （推荐）"></a>css in js （推荐）</h3><p>css in js  是比较推荐的一种的写法，但是也有不赞同的。</p>
+<pre><code>yarn add styled-components //下载
 
+//映入库以及主题组件
+import styled, &#123; ThemeProvider &#125; from &quot;styled-components&quot;;
+
+//用法  创建一个 组件 attrs是属性  用模板字符串运行函数的方法
+
+const KaInput = styled.input.attrs(&#123;
+  placeholder: &quot;hello world&quot;,
+  tcolor: &quot;red&quot;,
+&#125;)`
+  background-color: skyblue;
+  border-color: $&#123;(props) =&gt; props.tcolor&#125;;
+  color: $&#123;(props) =&gt; props.theme.tsColor&#125;;
+`;
+
+
+//render 函数部分 主题共享属性   
+        &lt;ThemeProvider theme=&#123;&#123; tsColor: "yellow" &#125;&#125;&gt;
+          &lt;HomeCpn&gt;
+            &lt;div className=&quot;banner&quot;&gt;banner&lt;/div&gt;
+            &lt;KaInput type=&quot;password&quot; color=&#123;this.state.color&#125;&gt;&lt;/KaInput&gt;
+          &lt;/HomeCpn&gt;
+        &lt;/ThemeProvider&gt;
+
+</code></pre>
+<h2 id="学习-AntDesign-学习UI库-11-3-2021"><a href="#学习-AntDesign-学习UI库-11-3-2021" class="headerlink" title="学习 AntDesign   学习UI库 11-3-2021"></a>学习 AntDesign   学习UI库 11-3-2021</h2><ol>
+<li><p>class的添加 将class传为一个数组  React原生添加  （麻烦 繁琐）</p>
+<p><code>className=&#123;[&quot;n&quot;, &quot;active&quot;].join(&quot; &quot;)&#125;</code></p>
+</li>
+<li><p>第三方库  classnames</p>
+<pre class=" language-js"><code class="language-js">yarn add classnames
+<span class="token keyword">import</span> calssName <span class="token keyword">from</span> <span class="token string">'classnames'</span>
+
+<span class="token comment" spellcheck="true">//在组件中使用</span>
+<span class="token operator">&lt;</span>h2 className<span class="token operator">=</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token function">className</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> active<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>isActive <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">></span>标题<span class="token number">2</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>
+<span class="token operator">&lt;</span>h2 className<span class="token operator">=</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token punctuation">[</span><span class="token string">"alli"</span><span class="token punctuation">]</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token operator">></span>啥也没有<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span></code></pre>
+<h3 id="Ant-Design-of-React"><a href="#Ant-Design-of-React" class="headerlink" title="Ant Design of React"></a>Ant Design of React</h3><ol>
+<li><p><code>antd</code> 是基于 Ant Design 设计体系的 React UI 组件库，主要用于研发企业级中后台产品。</p>
+</li>
+<li><h3 id="craco的使用"><a href="#craco的使用" class="headerlink" title="craco的使用"></a>craco的使用</h3><p>暴露一些配置属性使用（craco.config.js配置），改变scripts</p>
+<p>  <code>&quot;start&quot;: &quot;craco start&quot;,</code></p>
+<p>  <code>&quot;build&quot;: &quot;craco  build&quot;,</code></p>
+<p>  <code>&quot;test&quot;: &quot;craco  test&quot;,</code></p>
+<h3 id="3-craco-less使用"><a href="#3-craco-less使用" class="headerlink" title="3.craco-less使用"></a>3.craco-less使用</h3><ol>
+<li>yarn add craco-less</li>
+<li>文档中引入</li>
+</ol>
+</li>
+<li><p>alias别名配置</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>​    </p>
+<pre><code>const path = require(&quot;path&quot;);
+const resolve = (dir) =&gt; path.resolve(__dirname, dir);
+
+webpack: &#123;
+    alias: &#123;
+      &quot;@&quot;: resolve(&quot;src&quot;),
+      &quot;Components&quot;: resolve(&quot;src/Components&quot;),
+    &#125;,
+  &#125;,</code></pre>
+<h3 id="Demo—-评论列表案例"><a href="#Demo—-评论列表案例" class="headerlink" title="Demo— 评论列表案例"></a>Demo— 评论列表案例</h3><blockquote>
+<p> 保持数据不可变的图原则，否则不会响应变化，重新渲染</p>
+</blockquote>
+</style></p></blockquote>
             </div>
             <hr/>
 
@@ -535,7 +608,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kaki-li.github.io/2021/08/09/%E9%9D%A2%E8%AF%95%E9%A2%98/">https://kaki-li.github.io/2021/08/09/%E9%9D%A2%E8%AF%95%E9%A2%98/</a>
+                    <a href="https://kaki-li.github.io/2021/08/09/React/">https://kaki-li.github.io/2021/08/09/React/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -573,8 +646,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                                    <span class="chip bg-color">实习面试题</span>
+                                <a href="/tags/react/">
+                                    <span class="chip bg-color">react</span>
                                 </a>
                             
                         </div>
@@ -746,55 +819,6 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/10/07/web-%E6%80%A7%E8%83%BD%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="web 性能权威指南">
-                        
-                        <span class="card-title">web 性能权威指南</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            读书笔记
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-07
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/web%E4%B9%A6%E7%B1%8D/" class="post-category">
-                                    web书籍
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
-                        <span class="chip bg-color">web性能优化</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
                 <a href="/2021/08/09/Node.js/">
                     <div class="card-image">
                         
@@ -811,9 +835,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-09
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-09
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -827,6 +851,55 @@
                     
                     <a href="/tags/vue-react/">
                         <span class="chip bg-color">vue react</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/08/08/vue-next%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                    <div class="card-image">
+                        
+                        <img src="/images/vue3.jpg" class="responsive-img" alt="vue@next学习笔记">
+                        
+                        <span class="card-title">vue@next学习笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Vue3学习笔记Vue3的新变化-源码层面
+ 源码通过单个monoRepo管理代码
+ 使用TyprScript来重构代码
+
+vue3 源码学习虚拟Dom渲染过程
+ template(模板) =&gt; render function（渲染函
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-08
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            kaki-li
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/vue-next/">
+                        <span class="chip bg-color">vue@next</span>
                     </a>
                     
                 </div>

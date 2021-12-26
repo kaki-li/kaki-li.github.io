@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="前端面试题, kaki&#39;s blog">
+    <meta name="keywords" content="js高级进阶, kaki&#39;s blog">
     <meta name="description" content="来一场前端的风暴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>前端面试题 | kaki&#39;s blog</title>
+    <title>js高级进阶 | kaki&#39;s blog</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -321,12 +321,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">前端面试题</h1>
+                    <h1 class="description center-align post-title">js高级进阶</h1>
                 </div>
             </div>
         </div>
@@ -443,8 +443,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                                <span class="chip bg-color">实习面试题</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF-JavaScript/">
+                                <span class="chip bg-color">前端 JavaScript</span>
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-09
+                    2021-11-05
                 </div>
                 
 
@@ -475,41 +475,58 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="面试题（实习阶段）"><a href="#面试题（实习阶段）" class="headerlink" title="面试题（实习阶段）"></a>面试题（实习阶段）</h1><h2 id="一、什么是原型和原型链？"><a href="#一、什么是原型和原型链？" class="headerlink" title="一、什么是原型和原型链？"></a>一、什么是原型和原型链？</h2><h2 id="二、vue2以及vue3响应式原理"><a href="#二、vue2以及vue3响应式原理" class="headerlink" title="二、vue2以及vue3响应式原理"></a>二、vue2以及vue3响应式原理</h2><p>vue 2 响应式原理就是 Object.defindProperty(obj,key,{get和set设置函数读取和设置})</p>
-<pre><code>  Object.keys(obj).forEach((key) =&gt; &#123;
-  let value = obj[key];
-  Object.defineProperty(obj, key, &#123;
-    get: function () &#123;
-      console.log(`get$&#123;key&#125;`);
-
-      return value;
-    &#125;,
-    set: function (newValue) &#123;
-      console.log(`SETing $&#123;key&#125;`);
-      value = newValue;       
-    &#125;,
-  &#125;);
-&#125;);</code></pre>
-<blockquote>
-<p> 对函数的使用及其捕获器 apply  constract</p>
-</blockquote>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> fooProxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>foo<span class="token punctuation">,</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  apply<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>target<span class="token punctuation">,</span> thisArg<span class="token punctuation">,</span> argArray<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"对foo函数进行调用apply"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">return</span> target<span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>thisArg<span class="token punctuation">,</span> argArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-  construct<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>target<span class="token punctuation">,</span> argArray<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"构造函数调用"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">return</span> snew <span class="token function">target</span><span class="token punctuation">(</span><span class="token operator">...</span>argArray<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<h2 id="什么是响应式？"><a href="#什么是响应式？" class="headerlink" title="什么是响应式？"></a>什么是响应式？</h2><ul>
-<li><p> 当数据发生变化的时候，代码自动收集依赖。</p>
+                <h1 id="JS高级"><a href="#JS高级" class="headerlink" title="JS高级"></a>JS高级</h1><h2 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty()"></a>Object.defineProperty()</h2><p><code>Object.defineProperty()</code>方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><pre><code> Object.defineProperty(obj, prop, descriptor)</code></pre>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><h5 id="descriptor"><a href="#descriptor" class="headerlink" title="descriptor"></a><code>descriptor</code></h5><p>要定义的或修改的属性描述符，可以分为两类，数据属性描述符黑和存取属性描述符</p>
+<ul>
+<li><p><code>configurable</code></p>
+<p>当且仅当该属性的 <code>configurable</code> 键值为 <code>true</code> 时，该属性的描述符才能够被改变，同时该属性也能从对应的对象上被删除。 默认为 <code>false</code>。</p>
 </li>
-<li></li>
+<li><p><code>enumerable</code></p>
+<p>当且仅当该属性的 <code>enumerable</code> 键值为 <code>true</code> 时，该属性才会出现在对象的枚举属性中。 默认为 <code>false</code>。</p>
+</li>
 </ul>
+<p>数据描述符还具有以下可选键值：</p>
+<ul>
+<li><p><code>value</code></p>
+<p>该属性对应的值。可以是任何有效的 JavaScript 值（数值，对象，函数等）。 默认为 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>。</p>
+</li>
+<li><p><code>writable</code></p>
+<p>当且仅当该属性的 <code>writable</code> 键值为 <code>true</code> 时，属性的值，也就是上面的 <code>value</code>，才能被<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators"><code>赋值运算符</code> (en-US)</a>改变。 默认为 <code>false</code>。</p>
+</li>
+</ul>
+<blockquote>
+<p>存取描述符还具有以下可选键值</p>
+</blockquote>
+<ul>
+<li><p><code>get</code></p>
+<p>属性的 getter 函数，如果没有 getter，则为 <code>undefined</code>。当访问该属性时，会调用此函数。执行时不传入任何参数，但是会传入 <code>this</code> 对象（由于继承关系，这里的<code>this</code>并不一定是定义该属性的对象）。该函数的返回值会被用作属性的值。 默认为 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>。</p>
+</li>
+<li><p><code>set</code></p>
+<p>属性的 setter 函数，如果没有 setter，则为 <code>undefined</code>。当属性值被修改时，会调用此函数。该方法接受一个参数（也就是）</p>
+</li>
+</ul>
+<h2 id="JS闭包的理解"><a href="#JS闭包的理解" class="headerlink" title="JS闭包的理解"></a>JS闭包的理解</h2><ol>
+<li>函数是一等公民在js 之中 java中的一等公民是类class</li>
+<li>高阶函数（接受参数或者返回值是一个函数的函数）</li>
+</ol>
+<h3 id="闭包（词法闭包，函数）的定义"><a href="#闭包（词法闭包，函数）的定义" class="headerlink" title="闭包（词法闭包，函数）的定义"></a>闭包（词法闭包，函数）的定义</h3><ol>
+<li><p>在计算机的定义中是:在支持头等函数的语言中，实现词法绑定的技术。又称词法闭包（lexical closure）</p>
+</li>
+<li><blockquote>
+<p> 闭包与函数的区别就是，当捕捉闭包的时候，自由变量会被确定，即使脱离了捕捉的上下文，也能运行。</p>
+</blockquote>
+</li>
+<li><p>闭包本身是一个函数，和其词法环境(lexical envirment)捆绑在一起。它的上层作用域的自由变量可以被访问。</p>
+</li>
+</ol>
+<h2 id="数组的方法"><a href="#数组的方法" class="headerlink" title="数组的方法"></a>数组的方法</h2><p>splice(start,decount[num]) 会返回新数组并且改变原数组</p>
+<p>slice(start,end)会返回新数组并且不会改变原数组,[satrt,end)</p>
+<p>filter()</p>
+<p>map()</p>
+<p>reduce()</p>
+<p>find()</p>
+<p>findIndex()</p>
 
             </div>
             <hr/>
@@ -535,7 +552,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://kaki-li.github.io/2021/08/09/%E9%9D%A2%E8%AF%95%E9%A2%98/">https://kaki-li.github.io/2021/08/09/%E9%9D%A2%E8%AF%95%E9%A2%98/</a>
+                    <a href="https://kaki-li.github.io/2021/11/05/js%E9%AB%98%E7%BA%A7%E8%BF%9B%E9%98%B6/">https://kaki-li.github.io/2021/11/05/js%E9%AB%98%E7%BA%A7%E8%BF%9B%E9%98%B6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -573,8 +590,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%AE%9E%E4%B9%A0%E9%9D%A2%E8%AF%95%E9%A2%98/">
-                                    <span class="chip bg-color">实习面试题</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF-JavaScript/">
+                                    <span class="chip bg-color">前端 JavaScript</span>
                                 </a>
                             
                         </div>
@@ -742,9 +759,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/11/05/js%E9%AB%98%E7%BA%A7%E8%BF%9B%E9%98%B6/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="js高级进阶">
+                        
+                        <span class="card-title">js高级进阶</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            就是高级前端该学习的
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            kaki-li
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF-JavaScript/">
+                        <span class="chip bg-color">前端 JavaScript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/10/07/web-%E6%80%A7%E8%83%BD%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/">
                     <div class="card-image">
@@ -762,9 +826,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-10-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-10-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -782,51 +846,6 @@
                     
                     <a href="/tags/web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
                         <span class="chip bg-color">web性能优化</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/08/09/Node.js/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="前端面试题">
-                        
-                        <span class="card-title">前端面试题</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            实习面试题
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-09
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            kaki-li
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/vue-react/">
-                        <span class="chip bg-color">vue react</span>
                     </a>
                     
                 </div>
